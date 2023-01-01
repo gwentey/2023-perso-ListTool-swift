@@ -30,6 +30,7 @@ struct LanguageItemView: View {
                 .cornerRadius(8)
             HStack{
                 image
+                Spacer()
                 info
             }.padding()
         }.shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y:2)
@@ -41,6 +42,7 @@ private extension LanguageItemView {
             .resizable()
             .scaledToFit()
             .frame(width: 50, height: 50)
+            .padding(.horizontal)
     }
     
     var info : some View {
@@ -48,10 +50,14 @@ private extension LanguageItemView {
             Text(language.name)
                 .font(.headline)
                 .lineLimit(2)
+                .frame(minWidth:0, maxWidth: .infinity, alignment: .leading)
+
+
             Text(language.description)
                 .font(.subheadline)
                 .lineLimit(2)
         }
+        
     }
 }
 
