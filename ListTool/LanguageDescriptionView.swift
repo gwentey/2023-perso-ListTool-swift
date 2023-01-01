@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LanguageDescription: View {
+struct LanguageDescriptionView: View {
     
     var language : Language
     @State var learnt = false
@@ -35,8 +35,8 @@ struct LanguageDescription: View {
     }
 }
 
-struct LanguageDescription_Previews: PreviewProvider {
+struct LanguageDescriptionView_Previews: PreviewProvider {
     static var previews: some View {
-        LanguageDescription(language: Language.list[0])
+        LanguageDescriptionView(language: Language.list[0])
     }
 }
