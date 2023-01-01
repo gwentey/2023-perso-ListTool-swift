@@ -11,7 +11,7 @@ import SwiftUI
 struct ListToolApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LanguageDescription(language: Language.list[0])
         }
     }
 }
